@@ -4,11 +4,10 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
   { name: "Services", href: "#services" },
-  { name: "Process", href: "#process" },
-  { name: "Contact", href: "#contact" },
+  { name: "Our Process", href: "#process" },
+  { name: "About Us", href: "#about" },
+  { name: "Industries", href: "#industries" },
 ];
 
 export const Navbar = () => {
@@ -19,16 +18,16 @@ export const Navbar = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/30"
+      className="fixed top-4 left-0 right-0 z-50 px-4 md:px-8"
     >
-      <div className="container-custom section-padding py-4">
+      <div className="max-w-6xl mx-auto bg-white rounded-full shadow-lg border border-gray-100 px-4 md:px-6 py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-teal-light flex items-center justify-center">
-              <span className="font-display font-bold text-background text-sm">U</span>
+            <div className="w-8 h-8 rounded-lg bg-purple-primary flex items-center justify-center">
+              <span className="font-display font-bold text-white text-sm">R</span>
             </div>
-            <span className="font-display font-bold text-xl text-foreground">REN0X</span>
+            <span className="font-display font-bold text-xl text-gray-900">REN0X</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -37,24 +36,34 @@ export const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-300 text-sm font-medium"
+                className="text-gray-600 hover:text-gray-900 transition-colors duration-300 text-sm font-medium"
               >
                 {link.name}
               </a>
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Button variant="premium" size="sm">
-              Get Started
+          {/* CTA Buttons */}
+          <div className="hidden md:flex items-center gap-3">
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              className="text-gray-700 hover:text-gray-900 hover:bg-gray-100"
+            >
+              Contact Us
+            </Button>
+            <Button 
+              size="sm" 
+              className="bg-purple-primary hover:bg-purple-primary/90 text-white rounded-full px-5"
+            >
+              Get Started →
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-foreground"
+            className="md:hidden p-2 text-gray-900"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -70,20 +79,32 @@ export const Navbar = () => {
               transition={{ duration: 0.3 }}
               className="md:hidden mt-4 pb-4"
             >
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-2">
                 {navLinks.map((link) => (
                   <a
                     key={link.name}
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="text-muted-foreground hover:text-foreground transition-colors duration-300 text-sm font-medium py-2"
+                    className="text-gray-600 hover:text-gray-900 transition-colors duration-300 text-sm font-medium py-2 px-2"
                   >
                     {link.name}
                   </a>
                 ))}
-                <Button variant="premium" size="sm" className="w-full mt-2">
-                  Get Started
-                </Button>
+                <div className="flex flex-col gap-2 mt-4 pt-4 border-t border-gray-100">
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    className="justify-start text-gray-700"
+                  >
+                    Contact Us
+                  </Button>
+                  <Button 
+                    size="sm" 
+                    className="bg-purple-primary hover:bg-purple-primary/90 text-white rounded-full"
+                  >
+                    Get Started →
+                  </Button>
+                </div>
               </div>
             </motion.div>
           )}
