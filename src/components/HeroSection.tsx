@@ -7,11 +7,11 @@ export const HeroSection = () => {
   return (
     <section 
       id="home" 
-      className="relative min-h-screen flex items-center justify-center"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Fixed Parallax Background */}
+      {/* Parallax Background - absolute within section, uses background-attachment: fixed for parallax */}
       <div 
-        className="fixed inset-0 z-0"
+        className="absolute inset-0 z-0"
         style={{
           backgroundImage: `url(${heroBg})`,
           backgroundSize: 'cover',
