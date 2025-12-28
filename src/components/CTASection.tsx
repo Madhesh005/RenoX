@@ -19,7 +19,7 @@ export const CTASection = () => {
             background: 'linear-gradient(90deg,rgba(81, 33, 131, 1) 0%, rgba(49, 47, 125, 1) 50%, rgba(75, 34, 128, 1) 100%)'
           }}
         >
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 lg:gap-8">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 lg:gap-6">
             {/* Left Content */}
             <div className="flex-1 text-left">
               {/* Small Label */}

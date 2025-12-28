@@ -25,7 +25,7 @@ export const HeroSection = () => {
       </div>
 
       {/* Content - scrolls normally */}
-      <div className="w-full max-w-7xl mx-auto relative z-10 text-center px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-7xl mx-auto relative z-10 text-center px-3 sm:px-4 md:px-6 lg:px-8 pt-20 sm:pt-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -33,33 +33,39 @@ export const HeroSection = () => {
           className="flex flex-col items-center justify-center"
         >
           {/* Headline */}
-          <h1 className="font-display text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 sm:mb-8 text-center">
+          <h1 className="font-display text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] mb-4 sm:mb-6 md:mb-8 text-center px-2">
             <span className="text-white block">REN0X</span>
             <span className="text-white block">World's Premier</span>
             <span className="text-purple-primary block">IT Solutions</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-8 sm:mb-10 leading-relaxed text-center">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/80 max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto mb-6 sm:mb-8 md:mb-10 leading-relaxed text-center px-2">
             Get comprehensive technology solutions for your enterprise.
             We design, build, and optimize your digital infrastructure for sustainable growth.
           </p>
 
-          {/* CTA Button */}
+          {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="flex items-center justify-center"
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full max-w-xs sm:max-w-md px-4 sm:px-0"
           >
-            <a href="#connect">
-              <Button 
-                size="lg"
-                className="bg-purple-primary hover:bg-purple-primary/90 text-white rounded-full px-8 sm:px-10 h-12 sm:h-14 text-base sm:text-lg font-medium"
-              >
-                Contact Us
-              </Button>
-            </a>
+            <Button 
+              variant="outline" 
+              size="lg"
+              className="border-white/30 text-white hover:bg-white/10 rounded-full px-4 sm:px-6 md:px-8 w-full sm:w-auto min-w-[140px] sm:min-w-[160px] h-11 sm:h-12 text-sm sm:text-base"
+            >
+              Contact Us
+            </Button>
+            <Button 
+              size="lg"
+              className="bg-purple-primary hover:bg-purple-primary/90 text-white rounded-full px-4 sm:px-6 md:px-8 w-full sm:w-auto min-w-[140px] sm:min-w-[160px] h-11 sm:h-12 text-sm sm:text-base group"
+            >
+              Get Started 
+              <ArrowRight className="ml-2 w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
+            </Button>
           </motion.div>
         </motion.div>
       </div>

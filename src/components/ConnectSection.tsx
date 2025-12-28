@@ -1,47 +1,29 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Instagram, Facebook, Linkedin, Youtube } from "lucide-react";
+import { Instagram, Mail, Linkedin } from "lucide-react";
 
 const socialLinks = [
   {
     name: "Instagram",
     icon: Instagram,
-    href: "#",
+    href: "https://instagram.com/renox",
     bgColor: "bg-gradient-to-r from-purple-500 to-pink-500",
     hoverColor: "hover:from-purple-600 hover:to-pink-600"
   },
   {
-    name: "Facebook", 
-    icon: Facebook,
-    href: "#",
-    bgColor: "bg-blue-600",
-    hoverColor: "hover:bg-blue-700"
+    name: "Gmail",
+    icon: Mail,
+    href: "mailto:hello@ren0x.com",
+    bgColor: "bg-red-500",
+    hoverColor: "hover:bg-red-600"
   },
   {
     name: "LinkedIn",
     icon: Linkedin, 
-    href: "#",
-    bgColor: "bg-blue-700",
-    hoverColor: "hover:bg-blue-800"
-  },
-  {
-    name: "X (Twitter)",
-    icon: () => (
-      <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current">
-        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-      </svg>
-    ),
-    href: "#",
-    bgColor: "bg-black",
-    hoverColor: "hover:bg-gray-800"
-  },
-  {
-    name: "YouTube",
-    icon: Youtube,
-    href: "#", 
-    bgColor: "bg-red-600",
-    hoverColor: "hover:bg-red-700"
+    href: "https://linkedin.com/company/ren0x",
+    bgColor: "bg-blue-600",
+    hoverColor: "hover:bg-blue-700"
   }
 ];
 
@@ -73,7 +55,7 @@ export const ConnectSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex justify-center items-center gap-4"
+            className="flex justify-center items-center gap-6"
           >
             {socialLinks.map((social, index) => (
               <motion.a
