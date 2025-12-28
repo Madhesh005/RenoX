@@ -2,9 +2,9 @@ import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
 import { ServicesSection } from "@/components/ServicesSection";
-import { ProcessSection } from "@/components/ProcessSection";
 import { IndustriesSection } from "@/components/IndustriesSection";
 import { CTASection } from "@/components/CTASection";
+import { ConnectSection } from "@/components/ConnectSection";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
@@ -14,9 +14,9 @@ const Index = () => {
       <HeroSection />
       <AboutSection />
       <ServicesSection />
-      <ProcessSection />
       <IndustriesSection />
       <CTASection />
+      <ConnectSection />
       <Footer />
     </main>
   );

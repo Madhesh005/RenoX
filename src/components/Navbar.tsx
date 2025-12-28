@@ -1,17 +1,28 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { name: "Services", href: "#services" },
-  { name: "Our Process", href: "#process" },
   { name: "About Us", href: "#about" },
-  { name: "Industries", href: "#industries" },
+  { name: "Services", href: "#services" },
+  { name: "Our Clients", href: "#clients" },
 ];
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      // Make navbar transparent when scrolled past 100px
+      setIsScrolled(scrollPosition > 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <motion.nav
@@ -20,18 +31,19 @@ export const Navbar = () => {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="fixed top-4 left-0 right-0 z-50 px-4 md:px-8"
     >
-      <div className="max-w-6xl mx-auto bg-white rounded-full shadow-lg border border-gray-100 px-4 md:px-6 py-3">
+      <div className={`max-w-5xl mx-auto rounded-xl shadow-lg border px-2 md:px-6 py-3 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-white/80 backdrop-blur-md border-gray-100/50' 
+          : 'bg-white border-gray-100'
+      }`}>
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-purple-primary flex items-center justify-center">
-              <span className="font-display font-bold text-white text-sm">R</span>
-            </div>
-            <span className="font-display font-bold text-xl text-gray-900">REN0X</span>
+            <span className="font-display font-bold text-xl text-gray-900">RenoX</span>
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-16">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -44,20 +56,16 @@ export const Navbar = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden md:flex items-center gap-3">
-            <Button 
-              variant="ghost" 
-              size="sm" 
-              className="text-gray-700 hover:text-gray-900 hover:bg-gray-100"
-            >
-              Contact Us
-            </Button>
-            <Button 
-              size="sm" 
-              className="bg-purple-primary hover:bg-purple-primary/90 text-white rounded-full px-5"
-            >
-              Get Started →
-            </Button>
+          <div className="hidden md:flex items-center gap-2">
+ 
+            <a href="#connect">
+              <Button 
+                size="sm" 
+                className="bg-purple-primary hover:bg-purple-primary/90 text-white rounded-full px-5"
+              >
+                Connect with us →
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -91,19 +99,14 @@ export const Navbar = () => {
                   </a>
                 ))}
                 <div className="flex flex-col gap-2 mt-4 pt-4 border-t border-gray-100">
-                  <Button 
-                    variant="ghost" 
-                    size="sm" 
-                    className="justify-start text-gray-700"
-                  >
-                    Contact Us
-                  </Button>
-                  <Button 
-                    size="sm" 
-                    className="bg-purple-primary hover:bg-purple-primary/90 text-white rounded-full"
-                  >
-                    Get Started →
-                  </Button>
+                  <a href="#connect" onClick={() => setIsOpen(false)}>
+                    <Button 
+                      size="sm" 
+                      className="bg-purple-primary hover:bg-purple-primary/90 text-white rounded-full w-full"
+                    >
+                      Connect with us →
+                    </Button>
+                  </a>
                 </div>
               </div>
             </motion.div>

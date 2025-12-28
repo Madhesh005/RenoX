@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,8 +11,6 @@ html {
 body {
   overflow-x: hidden;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
 
 @layer base {
   :root {
@@ -172,5 +172,12 @@ body {
       opacity: 1;
       transform: scale(1);
     }
+  }
+
+  /* Parallax performance optimizations */
+  .parallax-optimized {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
   }
 }

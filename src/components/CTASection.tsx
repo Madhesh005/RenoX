@@ -5,54 +5,78 @@ import { Button } from "@/components/ui/button";
 
 export const CTASection = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: true, margin: "-150px" });
 
   return (
     <section id="contact" ref={ref} className="section-padding bg-background">
-      <div className="container-custom">
+      <div className="container-custom px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7 }}
-          className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-teal-primary via-secondary to-teal-primary/80 p-12 md:p-16 lg:p-20 text-center border border-teal-light/20"
+          initial={{ opacity: 0, y: 60, scale: 0.95 }}
+          animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+          className="relative overflow-hidden rounded-2xl p-6 sm:p-8 md:p-12 border border-white/10"
+          style={{
+            background: 'linear-gradient(90deg,rgba(81, 33, 131, 1) 0%, rgba(49, 47, 125, 1) 50%, rgba(75, 34, 128, 1) 100%)'
+          }}
         >
-          {/* Background Decoration */}
-          <div className="absolute inset-0 opacity-30">
-            <div className="absolute top-0 left-0 w-64 h-64 bg-teal-light/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 right-0 w-64 h-64 bg-purple-primary/10 rounded-full blur-3xl" />
-          </div>
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 lg:gap-8">
+            {/* Left Content */}
+            <div className="flex-1 text-left">
+              {/* Small Label */}
+              <motion.span
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                className="text-white/70 text-xs sm:text-sm font-medium uppercase tracking-wider mb-3 sm:mb-4 block"
+              >
+                FOR BUSINESS
+              </motion.span>
 
-          <div className="relative z-10">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4"
-            >
-              Let's Build Your Digital Solution
-            </motion.h2>
+              {/* Main Title */}
+              <motion.h2
+                initial={{ opacity: 0, y: 40 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.9, delay: 0.3, ease: "easeOut" }}
+                className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-white mb-4 sm:mb-6 leading-tight"
+              >
+                Let’s Build Scalable Digital Solutions
+              </motion.h2>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-muted-foreground text-lg max-w-xl mx-auto mb-10"
-            >
-              Ready to transform your business with intelligent technology? Schedule a consultation with our experts today.
-            </motion.p>
+              {/* Description */}
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+                className="text-white/80 text-base sm:text-lg mb-6 sm:mb-8 max-w-2xl leading-relaxed"
+              >
+                Partner with REN0X to design, develop, and deploy high-performance digital systems tailored to your business needs. From custom applications to intelligent automation, we help you turn ideas into reliable technology.              </motion.p>
 
+              {/* Pricing Info */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="mb-2"
+              >
+
+              </motion.div>
+            </div>
+
+            {/* Right Button */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-col sm:flex-row items-center justify-center gap-4"
+              initial={{ opacity: 0, x: 40, scale: 0.9 }}
+              animate={isInView ? { opacity: 1, x: 0, scale: 1 } : {}}
+              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+              className="lg:flex-shrink-0 w-full lg:w-auto"
             >
-              <Button variant="gold" size="lg">
-                Start Your Project
-              </Button>
-              <Button variant="outline-light" size="lg">
-                Contact Sales
-              </Button>
+              <a href="#connect" className="block w-full lg:w-auto">
+                <Button
+                  size="lg"
+                  className="bg-white/20 hover:bg-white/30 text-white border border-white/30 hover:border-white/50 rounded-xl px-6 sm:px-8 py-3 font-medium transition-all duration-300 backdrop-blur-sm w-full lg:w-auto"
+                >
+                  Connect With Us →
+                </Button>
+              </a>
             </motion.div>
           </div>
         </motion.div>
