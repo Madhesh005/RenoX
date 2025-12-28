@@ -33,7 +33,7 @@ export const Footer = () => {
               <div className="w-8 h-8 rounded-lg bg-teal-light flex items-center justify-center">
                 <span className="font-display font-bold text-background text-sm">R</span>
               </div>
-              <span className="font-display font-bold text-xl text-foreground">REN0X</span>
+              <span className="font-display font-bold text-xl text-foreground">RenoXentia</span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
               A professional, scalable, and future-ready IT solutions startup focused on digital transformation.
@@ -95,12 +95,12 @@ export const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-muted-foreground text-sm">
                 <Mail className="w-4 h-4 text-teal-light" />
-                hello@ren0x.com
+                hello@renoxentia.com
               </li>
 
               <li className="flex items-start gap-2 text-muted-foreground text-sm">
                 <Linkedin className="w-4 h-4 text-teal-light flex-shrink-0 mt-0.5" />
-                RenoX
+                RenoXentia
               </li>
             </ul>
           </motion.div>
@@ -115,18 +115,18 @@ export const Footer = () => {
           className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4"
         >
           <p className="text-muted-foreground text-sm">
-            © 2025 RENOX IT Solutions. All rights reserved.
+            © 2025 RenoXentia IT Solutions. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <a 
-              href="mailto:hello@ren0x.com" 
+              href="mailto:hello@renoxentia.com" 
               className="flex items-center justify-center w-10 h-10 rounded-lg bg-teal-light/10 hover:bg-teal-light/10 transition-all duration-300 group"
               aria-label="Email us"
             >
               <Mail className="w-5 h-5 text-muted-foreground group-hover:text-teal-light transition-colors duration-300" />
             </a>
             <a 
-              href="https://linkedin.com/company/ren0x" 
+              href="https://linkedin.com/company/renoxentia" 
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-10 h-10 rounded-lg bg-blue-400/10 hover:bg-blue-600/10 transition-all duration-300 group"

@@ -21,12 +21,12 @@ export const AboutSection = () => {
             transition={{ duration: 0.7 }}
           >
             <span className="text-teal-light text-sm font-semibold uppercase tracking-wider mb-4 block">
-              About REN0X
+              About RenoXentia
             </span>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-background leading-tight mb-6">
               Designing Systems Built to Last            </h2>
             <p className="text-background/70 text-lg mb-6 leading-relaxed">
-              REN0X delivers end-to-end digital solutions designed to support modern businesses at every stage of growth. Our expertise spans web and mobile development, automation systems, enterprise applications, and intelligent digital platforms.            </p>
+              RenoXentia delivers end-to-end digital solutions designed to support modern businesses at every stage of growth. Our expertise spans web and mobile development, automation systems, enterprise applications, and intelligent digital platforms.            </p>
             <p className="text-background/70 text-lg mb-10 leading-relaxed">
               We prioritize structured engineering, performance-driven development, and long-term maintainability, ensuring every solution we build is reliable, scalable, and future-ready. By combining technical excellence with a strategic mindset, we help organizations turn complex requirements into dependable digital systems.            </p>
 
@@ -42,7 +42,7 @@ export const AboutSection = () => {
             <div className="aspect-[4/3] rounded-2xl overflow-hidden">
               <img
                 src={teamWorkingImage}
-                alt="REN0X team working on enterprise software development"
+                alt="RenoXentia team working on enterprise software development"
                 className="w-full h-full object-cover"
               />
             </div>

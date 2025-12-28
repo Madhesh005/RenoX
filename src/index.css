@@ -6,10 +6,27 @@
 
 html {
   scroll-behavior: smooth;
+  /* Prevent initial layout shift */
+  width: 100%;
+  min-width: 320px;
 }
 
 body {
   overflow-x: hidden;
+  /* Ensure consistent initial rendering */
+  width: 100%;
+  min-width: 320px;
+}
+
+/* Prevent layout shift during initial load */
+* {
+  box-sizing: border-box;
+}
+
+/* Fix for initial viewport issues */
+@viewport {
+  width: device-width;
+  initial-scale: 1;
 }
 
 /* Mobile viewport fixes */
@@ -17,11 +34,18 @@ body {
   html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
+    /* Force proper width calculation */
+    width: 100vw;
+    max-width: 100%;
   }
   
   body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* Prevent horizontal overflow */
+    width: 100vw;
+    max-width: 100%;
+    position: relative;
   }
 }
 
@@ -153,6 +177,20 @@ body {
 
   .container-custom {
     @apply max-w-7xl mx-auto;
+    /* Prevent layout shift */
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Prevent initial layout shift for all containers */
+  .w-full {
+    width: 100% !important;
+  }
+  
+  /* Ensure consistent rendering */
+  .min-h-screen {
+    min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile */
   }
 }
 

@@ -7,14 +7,14 @@ const socialLinks = [
   {
     name: "Instagram",
     icon: Instagram,
-    href: "https://instagram.com/renox",
+    href: "https://instagram.com/renoxentia",
     bgColor: "bg-gradient-to-r from-purple-500 to-pink-500",
     hoverColor: "hover:from-purple-600 hover:to-pink-600"
   },
   {
     name: "Gmail",
     icon: Mail,
-    href: "mailto:hello@ren0x.com",
+    href: "mailto:hello@renoxentia.com",
     bgColor: "bg-red-500",
     hoverColor: "hover:bg-red-600"
   },

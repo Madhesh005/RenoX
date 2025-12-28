@@ -49,7 +49,7 @@ export const CTASection = () => {
                 transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
                 className="text-white/80 text-base sm:text-lg mb-6 sm:mb-8 max-w-2xl leading-relaxed"
               >
-                Partner with REN0X to design, develop, and deploy high-performance digital systems tailored to your business needs. From custom applications to intelligent automation, we help you turn ideas into reliable technology.              </motion.p>
+                Partner with RenoXentia to design, develop, and deploy high-performance digital systems tailored to your business needs. From custom applications to intelligent automation, we help you turn ideas into reliable technology.              </motion.p>
 
               {/* Pricing Info */}
               <motion.div

@@ -34,9 +34,9 @@ export const HeroSection = () => {
         >
           {/* Headline */}
           <h1 className="font-display text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] mb-4 sm:mb-6 md:mb-8 text-center px-2">
-            <span className="text-white block">REN0X</span>
-            <span className="text-white block">World's Premier</span>
-            <span className="text-purple-primary block">IT Solutions</span>
+            <span className="text-white block">RenoXentia</span>
+            <span className="text-white block">Building Scalable,</span>
+            <span className="text-purple-primary block"> Secure Digital Systems</span>
           </h1>
 
           {/* Subheadline */}

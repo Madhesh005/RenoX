@@ -2,20 +2,55 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RenoX</title>
-    <meta name="description" content="RenoX - Premier IT Solutions" />
-    <meta name="author" content="RenoX" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    
+    <title>RenoXentia</title>
+    <meta name="description" content="RenoXentia - Premier IT Solutions" />
+    <meta name="author" content="RenoXentia" />
 
-    <meta property="og:title" content="RenoX" />
-    <meta property="og:description" content="RenoX - Premier IT Solutions" />
+    <meta property="og:title" content="RenoXentia" />
+    <meta property="og:description" content="RenoXentia - Premier IT Solutions" />
     <meta property="og:type" content="website" />
 
     <meta name="twitter:card" content="summary_large_image" />
+    
+    <!-- Prevent layout shift during loading -->
+    <style>
+      html, body {
+        width: 100%;
+        min-width: 320px;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+      }
+      
+      #root {
+        width: 100%;
+        min-height: 100vh;
+      }
+      
+      /* Loading state to prevent flash */
+      .loading-container {
+        width: 100%;
+        height: 100vh;
+        background: hsl(200 30% 8%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
   </head>
 
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div class="loading-container">
+        <div style="color: white; font-family: system-ui, sans-serif;">Loading...</div>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -63,7 +63,7 @@ export const Navbar = () => {
             <div className="w-8 h-8 rounded-lg bg-purple-primary flex items-center justify-center">
               <span className="font-display font-bold text-white text-sm">R</span>
             </div>
-            <span className="font-display font-bold text-lg sm:text-xl text-gray-900">REN0X</span>
+            <span className="font-display font-bold text-lg sm:text-xl text-gray-900">RenoXentia</span>
           </a>
 
           {/* Desktop Navigation */}
