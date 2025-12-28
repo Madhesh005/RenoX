@@ -33,7 +33,8 @@ export const HeroSection = () => {
           className="flex flex-col items-center justify-center"
         >
           {/* Headline */}
-          <h1 className="font-display text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] mb-4 sm:mb-6 md:mb-8 text-center px-2">
+          <h1 className="font-display text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-bold leading-[1.15] mb-4 sm:mb-6 md:mb-8 text-center px-2"
+>
             <span className="text-white block">RenoXentia</span>
             <span className="text-white block">Building Scalable,</span>
             <span className="text-purple-primary block"> Secure Digital Systems</span>
@@ -52,20 +53,8 @@ export const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full max-w-xs sm:max-w-md px-4 sm:px-0"
           >
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-white/30 text-white hover:bg-white/10 rounded-full px-4 sm:px-6 md:px-8 w-full sm:w-auto min-w-[140px] sm:min-w-[160px] h-11 sm:h-12 text-sm sm:text-base"
-            >
-              Contact Us
-            </Button>
-            <Button 
-              size="lg"
-              className="bg-purple-primary hover:bg-purple-primary/90 text-white rounded-full px-4 sm:px-6 md:px-8 w-full sm:w-auto min-w-[140px] sm:min-w-[160px] h-11 sm:h-12 text-sm sm:text-base group"
-            >
-              Get Started 
-              <ArrowRight className="ml-2 w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
+
+
           </motion.div>
         </motion.div>
       </div>
